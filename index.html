@@ -169,6 +169,21 @@
         aspect-ratio: unset !important;
         height: 280px;
       }
+      /* Hero mobile: gradient clears the top 40% so image shows, darkens bottom for text */
+      .hero-gradient {
+        background: linear-gradient(to top,
+          rgba(11,26,16,0.99) 0%,
+          rgba(11,26,16,0.97) 36%,
+          rgba(11,26,16,0.55) 50%,
+          rgba(11,26,16,0.05) 68%,
+          rgba(11,26,16,0) 100%) !important;
+      }
+      /* Push content to start from ~42% down, removing justify-end */
+      .hero-content {
+        padding-top: 42vh !important;
+        padding-bottom: 2.5rem !important;
+        justify-content: flex-start !important;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -244,30 +259,30 @@
       style="object-position: center 30%;"
       fetchpriority="high"
     >
-    <div class="absolute inset-0"
+    <div class="hero-gradient absolute inset-0"
       style="background: linear-gradient(to top, rgba(13,11,8,0.97) 0%, rgba(13,11,8,0.65) 38%, rgba(13,11,8,0.15) 65%, rgba(13,11,8,0.3) 100%);"></div>
     <div class="absolute inset-0"
       style="background: radial-gradient(ellipse 65% 55% at 75% 40%, rgba(212,168,67,0.05) 0%, transparent 60%);"></div>
   </div>
 
-  <div class="relative z-10 flex-1 flex flex-col justify-end px-6 pb-14 pt-28 md:px-20 md:pb-24" style="padding-top: max(7rem, env(safe-area-inset-top, 0px) + 7rem);">
+  <div class="hero-content relative z-10 flex-1 flex flex-col justify-end px-6 pb-14 md:pb-24 md:px-20" style="padding-top:7rem;">
 
-    <div class="flex items-center gap-4 mb-7">
+    <div class="flex items-center gap-4 mb-5 md:mb-7">
       <span class="gold-bar"></span>
       <p class="font-body text-[0.65rem] tracking-[0.22em] text-gold">
         DECORACIÓN NAVIDEÑA · REPÚBLICA DOMINICANA
       </p>
     </div>
 
-    <h1 class="font-display mb-6"
-      style="font-size: clamp(2.8rem, 9vw, 6.8rem); font-weight:400; line-height:1.0; letter-spacing:-0.02em; max-width:14ch;">
+    <h1 class="font-display mb-4 md:mb-6"
+      style="font-size: clamp(2.6rem, 9vw, 6.8rem); font-weight:400; line-height:1.0; letter-spacing:-0.02em; max-width:14ch;">
       La navidad<br>que <em class="gold-text">siempre</em><br>soñaste.
     </h1>
 
-    <p class="font-body text-muted mb-10"
-      style="font-size:clamp(0.9rem, 2.5vw, 1rem); line-height:1.8; max-width:40ch;">
+    <p class="font-body text-muted mb-6 md:mb-10"
+      style="font-size:clamp(0.88rem, 2.5vw, 1rem); line-height:1.75; max-width:40ch;">
       Instalamos tu árbol y decoramos tu hogar para la temporada más especial del año.
-      Servicio a domicilio en toda la República Dominicana.
+      <span class="hidden sm:inline">Servicio a domicilio en toda la República Dominicana.</span>
     </p>
 
     <div class="flex flex-col sm:flex-row gap-3 items-stretch sm:items-start">
