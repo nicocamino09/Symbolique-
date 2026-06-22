@@ -48,6 +48,10 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+    /* Hero gold text shadow on mobile for legibility over the photo */
+    @media (max-width: 767px) {
+      .hero-gold { filter: drop-shadow(0 2px 8px rgba(0,0,0,0.55)); }
+    }
 
     .nav-base {
       transition: background 0.3s ease, border-color 0.3s ease;
@@ -282,7 +286,7 @@
 
     <h1 class="font-display mb-4 md:mb-6"
       style="font-size: clamp(2.6rem, 9vw, 6.8rem); font-weight:400; line-height:1.0; letter-spacing:-0.02em; max-width:14ch;">
-      La navidad<br>que <em class="gold-text">siempre</em><br>soñaste.
+      La navidad<br>que <em class="gold-text hero-gold">siempre</em><br>soñaste.
     </h1>
 
     <p class="font-body text-muted mb-6 md:mb-10"
