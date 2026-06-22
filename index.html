@@ -169,6 +169,12 @@
         aspect-ratio: unset !important;
         height: 280px;
       }
+      /* On mobile: shift to the right side of the image where the tree & ornament are */
+      .hero-img {
+        object-position: 72% 15% !important;
+        transform: scale(1.12) !important;
+        transform-origin: 72% 15% !important;
+      }
       /* Hero mobile: gradient clears the top 40% so image shows, darkens bottom for text */
       .hero-gradient {
         background: linear-gradient(to top,
@@ -255,7 +261,7 @@
     <img
       src="img/HERO SECCION.jpg"
       alt="Decoración navideña premium Symbolique"
-      class="w-full h-full object-cover"
+      class="hero-img w-full h-full object-cover"
       style="object-position: center 30%;"
       fetchpriority="high"
     >
