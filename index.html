@@ -163,9 +163,12 @@
       pointer-events: auto;
     }
 
-    /* Service photo: cap height on mobile to avoid overly tall cards */
+    /* Service photo: on mobile use fixed height, drop aspect-ratio to avoid width shrink */
     @media (max-width: 767px) {
-      .service-photo { max-height: 260px; }
+      .service-photo {
+        aspect-ratio: unset !important;
+        height: 280px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -231,13 +234,14 @@
 
 
 <!-- HERO -->
-<section id="inicio" class="relative min-h-screen flex flex-col overflow-hidden">
+<section id="inicio" class="relative flex flex-col overflow-hidden" style="min-height: 100svh; min-height: 100vh;">
 
   <div class="absolute inset-0 z-0">
     <img
       src="img/HERO SECCION.jpg"
       alt="Decoración navideña premium Symbolique"
       class="w-full h-full object-cover"
+      style="object-position: center 30%;"
       fetchpriority="high"
     >
     <div class="absolute inset-0"
@@ -246,7 +250,7 @@
       style="background: radial-gradient(ellipse 65% 55% at 75% 40%, rgba(212,168,67,0.05) 0%, transparent 60%);"></div>
   </div>
 
-  <div class="relative z-10 flex-1 flex flex-col justify-end px-6 pb-14 pt-32 md:px-20 md:pb-24">
+  <div class="relative z-10 flex-1 flex flex-col justify-end px-6 pb-14 pt-28 md:px-20 md:pb-24" style="padding-top: max(7rem, env(safe-area-inset-top, 0px) + 7rem);">
 
     <div class="flex items-center gap-4 mb-7">
       <span class="gold-bar"></span>
